@@ -12,27 +12,38 @@ sudo apt install ros-iron-ros2-control ros-iron-ros2-controllers ros-iron-gazebo
 Para simularlo en Rviz se debe ubicar en la carpeta donde se haya clonado el repositorio. Luego se ejecutan los siguientes comandos:
 
 Inicializar ROS.
+
 ``source /opt/ros/iron/setup.bash``
 
 Se instala el paquete 3dof.
+
 ``colcon build``
+
 ``source install/setup.bash``
 
 Se inicia la simulación en Rviz.
+
 ``ros2 launch 3dof visualization.launch.py``
 
+El video de demostración se encuentra en [este archivo descargable](images/video/Rviz.webm)
+![a](images/demostracion_Rviz.png)
 
 ## Simulación en Gazebo
 Para simularlo en Rviz se debe ubicar en la carpeta donde se haya clonado el repositorio. Luego se ejecutan los siguientes comandos:
 
 Inicializar ROS.
+
 ``source /opt/ros/iron/setup.bash``
 
 Se instala el paquete 3dof.
+
 ``colcon build``
+
 ``source install/setup.bash``
 
 Se inicia la simulación en Gazebo.
+
 ``ros2 launch 3dof gazebo.launch.py``
 
+El video de demostración se encuentra en [este archivo descargable](images/video/gazebo.webm)
 ![a](images/demostracion_gazebo.png)
