@@ -3,7 +3,7 @@
 Todos los archivos personalizados se encuentran comentados para el entendimiento del usuario.
 Este trabajo fue realizado en ROS2 Iron.
 
-[apariencia](image/apariencia_3dof.png)
+[apariencia](images/apariencia_3dof.png)
 ## Setup
 Cambiar algunos caminos
 se instala ros2, ros2 gazebo
