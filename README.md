@@ -35,4 +35,4 @@ Se instala el paquete 3dof.
 Se inicia la simulación en Gazebo.
 ``ros2 launch 3dof gazebo.launch.py``
 
-![a](images/gazebo.webm)
+![a](images/gazebo_2.mp4)
