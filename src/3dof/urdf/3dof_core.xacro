@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="inertial.xacro"/>
+
+<!--    En este archivo se crean y ensamblan todas las piezas con sus propiedades inerciales
+        y de colision-->
+
+<!-- Se ancla la base del brazo al mundo -->
+    <link name="world"/>
+    <joint name="world_joint" type="fixed">
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!-- Se diseña la base del brazo y se une con la parte siguiente -->
+    <link name="base_link">
+        <xacro:inertial_block mass="${base_mass}" length="${base_length}" radius="${base_radius}"/>
+        <xacro:visual_block radius="${base_radius}" length="${base_length}" color="0.5 0.5 0.5 1"/>
+        <xacro:collision_block radius="${base_radius}" length="${base_length}"/>
+    </link>
+
+    <joint name="joint_1" type="revolute">
+        <origin xyz="0.0 0.0 ${base_length}" rpy="0.0 0.0 0.0" />
+        <parent link="base_link"/>
+        <child link="link_1"/>
+        <axis xyz="0.0 0.0 1"/>
+        <limit effort="300.0" lower="0.0" upper="6.28318" velocity="1.0"/>
+    </joint>
+
+    <!-- Link 1 -->
+    <link name="link_1">
+        <xacro:inertial_block mass="${link1_mass}" length="${link1_length}" radius="${link1_radius}"/>
+        <xacro:visual_block radius="${link1_radius}" length="${link1_length}" color="0.5 0.5 0.5 1"/>
+        <xacro:collision_block radius="${link1_radius}" length="${link1_length}"/>
+    </link>
+
+    <!-- Codo -->
+    <link name="link_1_endlink">
+        <xacro:inertial_block mass="${link1_mass/3.0}" length="${2*link1_radius+2*link2_radius}" radius="${link1_radius}"/>
+        <visual>
+            <origin xyz="0.0 0.0 ${(2*link1_radius+2*link2_radius)/2.0}" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder length="${(2*link1_radius+2*link2_radius)}" radius="${link1_radius*1.1}"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 ${(2*link1_radius+2*link2_radius)/2.0}" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder length="${(2*link1_radius+2*link2_radius)}" radius="${link1_radius*1.1}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Articulacion codo -->
+    <joint name="link_1_endjoint" type="fixed">
+        <origin xyz="${-link1_radius} 0.0 ${link1_length}" rpy="0.0 ${M_PI/2.0} 0.0"/>
+        <parent link="link_1"/>
+        <child link="link_1_endlink"/>
+    </joint>
+
+    <joint name="joint_2" type="revolute">
+        <origin xyz="${link1_radius + link2_radius} 0.0 ${link1_length}" rpy="0.0 0.0 0.0"/>
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit effort="300.0" lower="0.0" upper="${M_PI}" velocity="1.0"/>
+    </joint>
+
+    <!-- Link 2 -->
+    <link name="link_2">
+        <xacro:inertial_block mass="${link2_mass}" length="${link2_length}" radius="${link2_radius}"/>
+        <xacro:visual_block radius="${link2_radius}" length="${link2_length}" color="0.5 0.5 0.5 1"/>
+        <xacro:collision_block radius="${link2_radius}" length="${link2_length}"/>
+    </link>
+
+    <!-- Link 2 end link -->
+    <link name="link_2_endlink">
+        <xacro:inertial_block mass="${link3_mass/3.0}" length="${2*link2_radius+2*link3_radius}" radius="${link2_radius}"/>
+        <visual>
+            <origin xyz="0.0 0.0 ${(2*link2_radius+2*link3_radius)/2.0}" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${link2_radius*1.1}" length="${2*link2_radius+2*link3_radius}"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 ${(2*link2_radius+2*link3_radius)/2.0}" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${link2_radius*1.1}" length="${2*link2_radius+2*link3_radius}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="link_2_endjoint" type="fixed">
+        <origin xyz="${-link2_radius} 0.0 ${link2_length - 0.01}" rpy="0.0 ${M_PI/2.0} 0.0"/>
+        <parent link="link_2"/>
+        <child link="link_2_endlink"/>
+    </joint>
+
+    <joint name="joint_3" type="revolute">
+        <origin xyz="${link2_radius + link3_radius} 0.0 ${link2_length}" rpy="0.0 0.0 0.0"/>
+        <parent link="link_2"/>
+        <child link="link_3"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit lower="0.0" upper="${M_PI * 2}" effort="300.0" velocity="1.0"/>
+    </joint>
+
+    <!-- Link 3 -->
+    <link name="link_3">
+        <xacro:inertial_block mass="${link3_mass}" length="${link3_length}" radius="${link3_radius}"/>
+        <xacro:visual_block radius="${link3_radius}" length="${link3_length}" color="0.5 0.5 0.5 1"/>
+        <xacro:collision_block radius="${link3_radius}" length="${link3_length}"/>
+    </link>
+
+    <!-- Mano efector final -->
+    <joint name="joint_4" type="fixed">
+        <origin xyz="0.0 0.0 ${link3_length}" rpy="0.0 0.0 0.0"/>
+        <parent link="link_3"/>
+        <child link="link_4"/>
+        <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+
+    <!-- Link 4 -->
+    <link name="link_4">
+        <xacro:inertial_block mass="${link4_mass}" length="${link4_length}" radius="${link4_radius}"/>
+        <visual>
+            <origin xyz="0.0 0.0 ${link4_radius}" rpy="0.0 ${M_PI/2.0} 0.0"/>
+            <geometry>
+                <box size="${link4_radius*2} ${link4_radius*2} ${link4_length}"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 ${link4_radius}" rpy="0.0 ${M_PI/2.0} 0.0"/>
+            <geometry>
+                <box size="${link4_radius*2} ${link4_radius*2} ${link4_length}"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

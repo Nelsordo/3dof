@@ -1,0 +1,34 @@
+running egg_info
+creating ../../build/3dof/3dof.egg-info
+writing ../../build/3dof/3dof.egg-info/PKG-INFO
+writing dependency_links to ../../build/3dof/3dof.egg-info/dependency_links.txt
+writing entry points to ../../build/3dof/3dof.egg-info/entry_points.txt
+writing requirements to ../../build/3dof/3dof.egg-info/requires.txt
+writing top-level names to ../../build/3dof/3dof.egg-info/top_level.txt
+writing manifest file '../../build/3dof/3dof.egg-info/SOURCES.txt'
+reading manifest file '../../build/3dof/3dof.egg-info/SOURCES.txt'
+writing manifest file '../../build/3dof/3dof.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/build
+creating /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/build/lib
+creating /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/build/lib/3dof
+copying 3dof/__init__.py -> /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/build/lib/3dof
+running install
+running install_lib
+creating /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof
+copying /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/build/lib/3dof/__init__.py -> /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof
+byte-compiling /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/ament_index
+creating /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/ament_index/resource_index
+creating /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/ament_index/resource_index/packages
+copying resource/3dof -> /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/ament_index/resource_index/packages
+copying package.xml -> /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/3dof
+creating /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/3dof/launch
+copying launch/visualization.launch.py -> /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/3dof/launch/
+copying launch/gazebo.launch.py -> /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/share/3dof/launch/
+running install_egg_info
+Copying ../../build/3dof/3dof.egg-info to /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/install.log'

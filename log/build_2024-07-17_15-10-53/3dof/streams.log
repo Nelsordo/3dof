@@ -1,0 +1,21 @@
+[1.694s] Invoking command in '/home/ubb/Downloads/ros2_ws_final/ros2_ws/src/3dof': PYTHONPATH=/home/ubb/Downloads/ros2_ws_final/ros2_ws/build/3dof/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubb/Downloads/ros2_ws_final/ros2_ws/install/3dof/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/3dof build --build-base /home/ubb/Downloads/ros2_ws_final/ros2_ws/build/3dof/build install --record /home/ubb/Downloads/ros2_ws_final/ros2_ws/build/3dof/install.log --single-version-externally-managed install_data
+[2.322s] running egg_info
+[2.324s] writing ../../build/3dof/3dof.egg-info/PKG-INFO
+[2.326s] writing dependency_links to ../../build/3dof/3dof.egg-info/dependency_links.txt
+[2.328s] writing entry points to ../../build/3dof/3dof.egg-info/entry_points.txt
+[2.329s] writing requirements to ../../build/3dof/3dof.egg-info/requires.txt
+[2.335s] writing top-level names to ../../build/3dof/3dof.egg-info/top_level.txt
+[2.342s] reading manifest file '../../build/3dof/3dof.egg-info/SOURCES.txt'
+[2.349s] writing manifest file '../../build/3dof/3dof.egg-info/SOURCES.txt'
+[2.349s] running build
+[2.349s] running build_py
+[2.350s] running install
+[2.352s] running install_lib
+[2.360s] running install_data
+[2.361s] running install_egg_info
+[2.366s] removing '/home/ubb/Downloads/ros2_ws_final/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof-0.0.0-py3.10.egg-info' (and everything under it)
+[2.381s] Copying ../../build/3dof/3dof.egg-info to /home/ubb/Downloads/ros2_ws_final/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof-0.0.0-py3.10.egg-info
+[2.381s] running install_scripts
+[2.431s] Installing operacion script to /home/ubb/Downloads/ros2_ws_final/ros2_ws/install/3dof/lib/3dof
+[2.441s] writing list of installed files to '/home/ubb/Downloads/ros2_ws_final/ros2_ws/build/3dof/install.log'
+[2.501s] Invoked command in '/home/ubb/Downloads/ros2_ws_final/ros2_ws/src/3dof' returned '0': PYTHONPATH=/home/ubb/Downloads/ros2_ws_final/ros2_ws/build/3dof/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubb/Downloads/ros2_ws_final/ros2_ws/install/3dof/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/3dof build --build-base /home/ubb/Downloads/ros2_ws_final/ros2_ws/build/3dof/build install --record /home/ubb/Downloads/ros2_ws_final/ros2_ws/build/3dof/install.log --single-version-externally-managed install_data

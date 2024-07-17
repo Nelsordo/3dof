@@ -1,0 +1,20 @@
+[0.733s] Invoking command in '/home/edu/Documentos/universidad/ros/ros2_ws/src/3dof': PYTHONPATH=/home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/3dof build --build-base /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/build install --record /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/install.log --single-version-externally-managed install_data
+[1.016s] running egg_info
+[1.017s] writing ../../build/3dof/3dof.egg-info/PKG-INFO
+[1.017s] writing dependency_links to ../../build/3dof/3dof.egg-info/dependency_links.txt
+[1.017s] writing entry points to ../../build/3dof/3dof.egg-info/entry_points.txt
+[1.017s] writing requirements to ../../build/3dof/3dof.egg-info/requires.txt
+[1.017s] writing top-level names to ../../build/3dof/3dof.egg-info/top_level.txt
+[1.019s] reading manifest file '../../build/3dof/3dof.egg-info/SOURCES.txt'
+[1.024s] writing manifest file '../../build/3dof/3dof.egg-info/SOURCES.txt'
+[1.024s] running build
+[1.024s] running build_py
+[1.025s] running install
+[1.025s] running install_lib
+[1.026s] running install_data
+[1.027s] running install_egg_info
+[1.029s] removing '/home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof-0.0.0-py3.10.egg-info' (and everything under it)
+[1.030s] Copying ../../build/3dof/3dof.egg-info to /home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages/3dof-0.0.0-py3.10.egg-info
+[1.031s] running install_scripts
+[1.051s] writing list of installed files to '/home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/install.log'
+[1.080s] Invoked command in '/home/edu/Documentos/universidad/ros/ros2_ws/src/3dof' returned '0': PYTHONPATH=/home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edu/Documentos/universidad/ros/ros2_ws/install/3dof/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/3dof build --build-base /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/build install --record /home/edu/Documentos/universidad/ros/ros2_ws/build/3dof/install.log --single-version-externally-managed install_data

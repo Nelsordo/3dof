@@ -1,0 +1,3 @@
+[console_scripts]
+operacion = 3dof.operacion:main
+
