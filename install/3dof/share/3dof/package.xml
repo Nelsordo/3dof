@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<!--Se crea el paquete "3dof" con todas las libreríaa utilizar en el proyecto-->
+
 <package format="3">
   <name>3dof</name>
   <version>0.0.0</version>
