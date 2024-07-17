@@ -22,7 +22,7 @@ Se inicia la simulación en Rviz.
 ``ros2 launch 3dof visualization.launch.py``
 
 
-##Simulación en Gazebo
+## Simulación en Gazebo
 Para simularlo en Rviz se debe ubicar en la carpeta donde se haya clonado el repositorio. Luego se ejecutan los siguientes comandos:
 
 Inicializar ROS.
