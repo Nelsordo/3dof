@@ -12,6 +12,7 @@ Para lograr ejecutar el programa se deben cambiar algunas dirección de archivos
 - En el archivo src/3dof/urdf/robot.urdf en la linea 42 se debe cambiar la dirección por ``(dirección de repositorio)/src/3dof/config/joint_controller.yaml``
 
 Se deben instalar las siguientes dependencias:
+- ``sudo apt install ros-iron-gazebo-ros-pkgs``
 - ``sudo apt install ros-iron-ros2-control``
 - ``sudo apt install ros-iron-ros2-controllers``
 - ``sudo apt install ros-iron-gazebo-ros2-control``
